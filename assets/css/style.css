@@ -1,18 +1,27 @@
 body{
     background-color: aqua;
-    font-family: sans-serif;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    padding-top: 10px;
 }
 #app{
+    margin: 0;
+    padding: 0;
     min-width: 400px;
     width: 80vw;
     margin: auto;
     background-color: white;
+    border: 5px solid black;
+    box-sizing: border-box;
+    border-radius: 10px;
 }
 #app-heading{
-    color: gray;
-    margin: 10px;
-    padding: 10px;
+    color:purple;
+    padding: 15px;
+    margin-top: 0;
     text-align: center;
+    background-color:gold;
 }
 input, select   {
     display: block;
@@ -56,12 +65,14 @@ select:focus{
 #button-section button{
     width: 30%;
     font-size: 20px;
+    margin-bottom: 10px;
     padding: 10px;
     font-weight: bold;
 }
 #add-button{
-    background-color: green;
+    background-color: blue;
     color: white;
+    border-radius: 10px;
 }
 #add-button:hover{
     background-color: darkgreen;
@@ -84,4 +95,24 @@ select:focus{
 }
 #taskList-delete{
     margin: auto;
+    font-size: 25px;
+}
+#taskList-delete a:hover{
+    color: red
+}
+ul{
+    margin: 0;
+    padding: 0;
+    max-height: 50vh;
+    overflow: scroll;
+}
+ul::-webkit-scrollbar {
+    display: none;
+  }
+li:nth-child(2n+1){
+    background-color:lightgreen;
+} 
+li:hover{
+    background-color: bisque;
+    color: indigo;
 }
