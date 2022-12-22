@@ -43,11 +43,13 @@
 
         <ul id="task-display">
             <% for(let i of task_list){ %>
-                <li id="<%= i._id %>">
-                    <div id="taskList-description">
-                        <input type="checkbox" id="<%= i._id %>">
-                        <div>
-                            <p> <%= i.description %> </p>
+                <li>
+                    <div id="taskList-desc-date">
+                        <div id="taskList-desc">
+                            <input type="checkbox" class="custom-checkbox" id="<%= i._id %>" <%= i.checked  ? "checked" : "" %> >
+                            <label for="<%= i._id %>"><p><%= i.description %></p> </label>
+                        </div>
+                        <div id="taskList-date">
                             <span><i class="fa-solid fa-calendar-days"></i> <%= i.date.getDate() +"/"+ (i.date.getMonth()+1) +"/"+ i.date.getFullYear(); %> </span>
                         </div>
                     </div>
@@ -61,6 +63,8 @@
             <% } %>
         </ul>
     </div>
+
+    <script src="/js/script.js"></script>
     
 </body>
 </html>

@@ -12,6 +12,10 @@ const todo_schema = mongoose.Schema({
     date:{
         type: Date,
         required: true
+    },
+    checked: {
+        type: Boolean,
+        required: true
     }
 });
 

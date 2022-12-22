@@ -6,7 +6,8 @@ module.exports.action = function(req, res){
         TodoList.create({
             description: req.body.description,
             category: req.body.category,
-            date: req.body.date
+            date: req.body.date,
+            checked: false
         }, function(err, newTask){
             if(err){
                 console.log("Error in creating Task");

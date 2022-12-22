@@ -85,10 +85,23 @@ select:focus{
     justify-content: space-between;
     align-items: center;
 }
-#taskList-description{
+#taskList-desc-date{
     width: 60%;
     display: flex;
+    flex-direction: column;
+}
+#taskList-desc{
+    display: flex;
     flex-direction: row;
+}
+#taskList-desc label{
+    font-size: large;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+#taskList-date{
+    padding-left: 50px;
 }
 #taskList-category{
     width: 30%;
@@ -114,5 +127,7 @@ li:nth-child(2n+1){
 } 
 li:hover{
     background-color: bisque;
-    color: indigo;
+}
+input:checked + label{
+    text-decoration: line-through;
 }
