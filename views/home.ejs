@@ -17,13 +17,13 @@
         <form action="/action-page" method="post">
             <div id="form-first-row">
                 <label for="task-input">DESCRIPTION</label>
-                <input type="text" id="task-description" placeholder="What do you need to do?" required>    
+                <input type="text" name="description" id="task-description" placeholder="What do you need to do?" required>    
             </div>
             <hr>
             <div id="form-sec-row">
                 <div>
                     <label for="task-category">CATEGORY</label>
-                    <select name="task-category" id="task-category" required>
+                    <select name="category" id="task-category" required>
                         <option value="personal">Personal</option>
                         <option value="home">Home</option>
                         <option value="work">Work</option>
@@ -33,12 +33,12 @@
                 </div>
                 <div>
                     <label for="task-dueDate">DUE DATE</label>
-                    <input type="date" id="task-dueDate" required>
+                    <input type="date" name="date" id="task-dueDate" required>
                 </div>
             </div>
             <hr>
             <div id="button-section">
-                <button type="submit" add-button"><i class="fa-solid fa-circle-plus"></i> Add Task</button>
+                <button type="submit" id="add-button" ><i class="fa-solid fa-circle-plus"></i> Add Task</button>
             </div>
         </form>
         <hr>
