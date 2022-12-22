@@ -4,11 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <title><%= title %></title>
 </head>
 <body>
     <h1>
-        Todo List
+        TODO App
     </h1>
+    <form action="">
+        <label for="task-input">DESCRIPTION</label>
+        <input type="text" id="task-description" placeholder="What do you need to do?" required>
+        <label for="task-category">CATEGORY</label>
+        <select name="task-category" id="task-category">
+            <option value="personal">Personal</option>
+            <option value="home">Home</option>
+            <option value="work">Work</option>
+            <option value="school">School</option>
+            <option value="other">Other</option>
+        </select>
+        <label for="task-dueDate">DUE DATE</label>
+        <input type="date" id="task-dueDate">
+    </form>
+
+    <button><i class="fa-solid fa-circle-plus"></i> Add Task</button>
+    <button><i class="fa-solid fa-trash-can"></i> Delete Task</button>
+
+    <ul>
+        <li>
+            <div>
+                <p>Why not add a task?</p>
+                <span><i class="fa-solid fa-calendar-days"></i> May 2, 2022</span>
+            </div>
+            <div>
+                <p>School</p>
+            </div>
+        </li>
+    </ul>
 </body>
 </html>
