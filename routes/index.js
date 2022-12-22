@@ -6,6 +6,6 @@ console.log('Router loaded');
 
 router.get('/', homeController.home);
 router.use('/action-page', require('./action-page'));
-
+router.use('/delete-task', require('./delete-task'));
 
 module.exports = router;

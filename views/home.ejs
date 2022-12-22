@@ -44,15 +44,23 @@
         <hr>
 
         <ul id="task-display">
-            <li>
-                <input type="checkbox">
-                <div>
-                    <p>Why not add a task?</p>
-                    <span><i class="fa-solid fa-calendar-days"></i> May 2, 2022</span>
-                </div>
-                <h4>Work</h4>
-                <i class="fa-solid fa-trash-can"></i>
-            </li>
+            <% for(let i of task_list){ %>
+                <li>
+                    <div id="taskList-description">
+                        <input type="checkbox" id="i._id">
+                        <div>
+                            <p> <%= i.description %> </p>
+                            <span><i class="fa-solid fa-calendar-days"></i> <%= i.date.getDate() +"/"+ (i.date.getMonth()+1) +"/"+ i.date.getFullYear(); %> </span>
+                        </div>
+                    </div>
+                    <div id="taskList-category">
+                        <h4> <%= i.category %> </h4>
+                    </div>
+                    <div id="taskList-delete">
+                        <a href="/delete-task/?id=<%=i._id%>"><i class="fa-solid fa-trash-can"></i></a>
+                    </div>
+                </li>
+            <% } %>
         </ul>
     </div>
     
