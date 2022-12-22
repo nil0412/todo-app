@@ -14,7 +14,7 @@
             <i class="fa-regular fa-rectangle-list"></i> TODO App
         </h1>
         <hr>
-        <form action="">
+        <form action="/action-page" method="post">
             <div id="form-first-row">
                 <label for="task-input">DESCRIPTION</label>
                 <input type="text" id="task-description" placeholder="What do you need to do?" required>    
@@ -23,7 +23,7 @@
             <div id="form-sec-row">
                 <div>
                     <label for="task-category">CATEGORY</label>
-                    <select name="task-category" id="task-category">
+                    <select name="task-category" id="task-category" required>
                         <option value="personal">Personal</option>
                         <option value="home">Home</option>
                         <option value="work">Work</option>
@@ -33,27 +33,25 @@
                 </div>
                 <div>
                     <label for="task-dueDate">DUE DATE</label>
-                    <input type="date" id="task-dueDate">
+                    <input type="date" id="task-dueDate" required>
                 </div>
             </div>
             <hr>
+            <div id="button-section">
+                <button type="submit" add-button"><i class="fa-solid fa-circle-plus"></i> Add Task</button>
+            </div>
         </form>
-
-        <div id="button-section">
-            <button id="add-button"><i class="fa-solid fa-circle-plus"></i> Add Task</button>
-            <button id="delete-button"><i class="fa-solid fa-trash-can"></i> Delete Task</button>
-        </div>
         <hr>
 
-        <ul>
+        <ul id="task-display">
             <li>
+                <input type="checkbox">
                 <div>
                     <p>Why not add a task?</p>
                     <span><i class="fa-solid fa-calendar-days"></i> May 2, 2022</span>
                 </div>
-                <div>
-                    <p>School</p>
-                </div>
+                <h4>Work</h4>
+                <i class="fa-solid fa-trash-can"></i>
             </li>
         </ul>
     </div>

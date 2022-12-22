@@ -1,6 +1,12 @@
 const express = require('express');
-const app = express();
+const path = require('path');
 const port = 8000;
+
+const db = require('./config/mongoose');
+
+const TodoList = require('./models/todo')
+
+const app = express();
 
 app.use('/', require('./routes/index'));
 
