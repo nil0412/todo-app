@@ -13,6 +13,7 @@
 
     function handleClick(e){
         var target = e.target;
+        console.log("********* Its in handleClick function ********");
         if(target.className === "custom-checkbox"){         
             const taskId = target.id;         
             toggleTask(taskId);     
